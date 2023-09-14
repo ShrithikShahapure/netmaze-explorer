@@ -1,30 +1,26 @@
 # 2.On Premises Network Simulation
+ - Now we will build another VPC to simulate an on premises environment
 
-For the sake of the dfjdsaiophjodshof;dsjf;
+- This repository contains Terraform configurations to automate the creation of AWS infrastructure. It includes the setup of a VPC, Internet Gateway and public subnet.
+
+## What's being created:
+
+- VPC called "network-sim-on-prem-vpc" of CIDR 15.0.0.0/16
+
+- Internet Gateway called "network-sim-on-prem-igw" and attatching it to above VPC
+
+- Public Subnet called network-sim-on-prem-public-subnet-us-east-1a with route table
 
 ## Prerequisites
+Make sure you have Terraform installed and you configured your aws cli, and stored your access-key and secret-access-key locally in your .env
 
-Before you begin, make sure you have the following prerequisites:
-
-- [Terraform](https://www.terraform.io/downloads.html) installed on your local machine.
-- AWS CLI configured with necessary access and secret keys.
-
-## Usage
-
-### 1. Clone the Repository
-
-```bash
-git clone <repository-url>
-cd <repository-directory>
-```
-
-### 2. Create a terraform Directory
+### 1. Create a terraform Directory
 Create a terraform directory within the repository to organize your Terraform configuration files. Inside this directory, place your Terraform configuration files, such as main.tf, variables.tf, and terraform.tfvars (if needed).
 
-### 3. Define Variables
+### 2. Define Variables
 In the variables.tf file, define your variables, such as VPC CIDR block, subnet CIDR blocks, availability zones, and AWS region. Modify these variables to match your requirements.
 
-### 4. Makefile
+### 3. Makefile
 We have included a Makefile for simplifying Terraform operations. Use the following commands:
 
 make init: Initialize Terraform in the terraform directory.
@@ -40,9 +36,5 @@ terraform plan
 terraform apply
 ```
 
-### 6. Review and Confirm
-Review the Terraform plan output before applying changes. Confirm by typing "yes" when prompted.
-
 ### 7. Clean Up
 After you're finished, use make destroy or terraform destroy to remove the created AWS resources.
-
