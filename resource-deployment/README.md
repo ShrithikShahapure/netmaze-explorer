@@ -1,0 +1,1 @@
+generate a key pair first and add the vpc id in variables along with the subnet value
