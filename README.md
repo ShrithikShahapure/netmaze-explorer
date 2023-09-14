@@ -2,6 +2,7 @@
 
 Design a hybrid networking environment where on-premises networks connect securely to AWS resources using AWS's networking capabilities, ensuring secure data transition and effective resource access controls.
 
+![Architectture](netmaze-architecture.png)
 
 - **AWS Services Used:**
     - AWS VPC
